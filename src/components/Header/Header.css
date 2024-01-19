@@ -1,0 +1,18 @@
+.header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.company {
+  /* https://www.avanse.com/viewPagesAssets/img/logo.png */
+
+  text-align: start;
+}
+.user {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  align-items: center;
+  text-align: center;
+}
+.user-icon {
+  height: 40px;
+}

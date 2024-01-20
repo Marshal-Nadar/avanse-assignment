@@ -1,3 +1,7 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
 .login-main {
   display: flex;
   align-items: center;
@@ -7,28 +11,16 @@
       rgba(255, 255, 255, 0.7),
       rgba(255, 255, 255, 0.3)
     ),
-    url("https://images.pexels.com/photos/114979/pexels-photo-114979.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500");
+    url('https://images.pexels.com/photos/114979/pexels-photo-114979.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500');
   background-size: cover;
   background-position: center;
 }
-
-.form {
-  background-color: white;
-  padding: 0px 60px;
-  border-radius: 10px;
-}
-
-h1 {
-  color: rgb(77, 1, 77);
-  text-align: center;
-}
-
-button {
+.btn-login {
   width: 100%;
   height: 50px;
   padding: 10px;
   border: none;
-  background-color: rebeccapurple;
+  background-color: #01b3b4;
   color: white;
   border-radius: 5px;
   font-weight: bold;
@@ -36,4 +28,209 @@ button {
   cursor: pointer;
   margin-top: 15px;
   margin-bottom: 30px;
+}
+.login-title {
+  padding-bottom: 10px;
+}
+.form {
+  background-color: white;
+  padding: 28px 60px;
+  border-radius: 10px;
+}
+
+h1 {
+  color: #01b3b4;
+  text-align: center;
+}
+/* For Button */
+.btn-common {
+  width: 10%;
+  background: #01b3b4;
+  border: navajowhite;
+  color: #ffff;
+  padding: 10px;
+  border-radius: 3px;
+}
+.btn-common:hover {
+  background-color: #0d8686;
+  transition: all 0.8s;
+}
+/* For Header */
+.header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  /* border-bottom: 1px solid #01b3b4; */
+  box-shadow: 0 0 8px #01b3b4;
+  padding: 1rem;
+}
+.company {
+  /* https://www.avanse.com/viewPagesAssets/img/logo.png */
+
+  text-align: start;
+}
+.user {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  align-items: center;
+  text-align: center;
+}
+.user-icon {
+  height: 40px;
+}
+
+.info:hover {
+  background-color: #0d8686;
+  color: #ffff;
+  padding: 10px;
+  transition: all 0.5s;
+}
+
+/* For SortableSearchableTable */
+.sort-container {
+  padding: 1rem;
+}
+.sort-main {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding-bottom: 0.8rem;
+}
+.sort-sub {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+.sortsearch-operation {
+  display: flex;
+  gap: 1rem;
+  margin-left: 1rem;
+}
+.search-box {
+  padding: 7px;
+  margin: 10px 0px;
+  border-radius: 5px;
+  border: 1px solid gray;
+  outline: none;
+}
+.search-box:focus {
+  outline: none !important;
+  border: 1px solid #01b3b4;
+  /* box-shadow: 0 0 10px #719ece; */
+}
+.err-msg {
+  padding-bottom: 1rem;
+  color: red;
+}
+select {
+  width: 150px;
+  padding: 5px 35px 5px 5px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  height: 34px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  /* background: url(https://stackoverflow.com/favicon.ico) 96% / 15% no-repeat
+    #eee; */
+}
+select:focus {
+  outline: none !important;
+  border: 1px solid #01b3b4;
+  /* box-shadow: 0 0 10px #719ece; */
+}
+
+/* CAUTION: IE hackery ahead */
+select::-ms-expand {
+  display: none; /* remove default arrow on ie10 and ie11 */
+}
+.table-main {
+  padding-top: 1rem;
+  width: 100%;
+}
+
+/* For Modal */
+.StyledModal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--color-grey-0);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-lg);
+  padding: 3.2rem 4rem;
+  transition: all 0.5s;
+}
+.Overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--backdrop-color);
+  backdrop-filter: blur(4px);
+  z-index: 1000;
+  transition: all 0.5s;
+}
+
+@media screen and (max-width: 480px) {
+  /* Your mobile styles go here */
+  body {
+    font-size: 14px; /* Example adjustment for smaller text on mobile */
+  }
+
+  .sort-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding-bottom: 0.8rem;
+  }
+  .sortsearch-operation {
+    display: flex;
+    gap: 1rem;
+    margin-left: 1rem;
+  }
+  .btn-common {
+    width: 24%;
+    background: #01b3b4;
+    border: navajowhite;
+    color: #ffff;
+    padding: 10px;
+    border-radius: 3px;
+  }
+  .user {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 700) {
+  /* Your mobile styles go here */
+  body {
+    font-size: 14px; /* Example adjustment for smaller text on mobile */
+  }
+
+  .sort-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding-bottom: 0.8rem;
+  }
+  .sortsearch-operation {
+    display: flex;
+    gap: 1rem;
+    margin-left: 1rem;
+  }
+  .btn-common {
+    width: 24%;
+    background: #01b3b4;
+    border: navajowhite;
+    color: #ffff;
+    padding: 10px;
+    border-radius: 3px;
+  }
+  .user {
+    display: none;
+  }
 }

@@ -29,6 +29,20 @@
   margin-top: 15px;
   margin-bottom: 30px;
 }
+.btn-disable {
+  width: 100%;
+  height: 50px;
+  padding: 10px;
+  border: none;
+  background-color: #c8c8c8;
+  color: white;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 18px;
+  cursor: pointer;
+  margin-top: 15px;
+  margin-bottom: 30px;
+}
 .login-title {
   padding-bottom: 10px;
 }
@@ -55,6 +69,31 @@ h1 {
   background-color: #0d8686;
   transition: all 0.8s;
 }
+
+/* For Table */
+table {
+  /* margin-left: auto;
+  margin-right: auto; */
+}
+
+th,
+td {
+  padding: 8px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+th {
+  background-color: #01b3b4;
+}
+tr:hover {
+  background-color: #d6eeee;
+}
+
+.table-main {
+  padding-top: 1rem;
+  width: 100%;
+}
+
 /* For Header */
 .header {
   display: grid;
@@ -79,9 +118,9 @@ h1 {
 }
 
 .info:hover {
-  background-color: #0d8686;
-  color: #ffff;
-  padding: 10px;
+  color: #01b3b4;
+  /* color: #ffff; */
+  /* padding: 10px; */
   transition: all 0.5s;
 }
 
@@ -144,10 +183,6 @@ select:focus {
 select::-ms-expand {
   display: none; /* remove default arrow on ie10 and ie11 */
 }
-.table-main {
-  padding-top: 1rem;
-  width: 100%;
-}
 
 /* For Modal */
 .StyledModal {
@@ -160,7 +195,11 @@ select::-ms-expand {
   box-shadow: var(--shadow-lg);
   padding: 3.2rem 4rem;
   transition: all 0.5s;
+  border: 2px solid #01b3b4;
+  color: #000;
+  border-radius: 5px;
 }
+
 .Overlay {
   position: fixed;
   top: 0;
@@ -173,64 +212,153 @@ select::-ms-expand {
   transition: all 0.5s;
 }
 
-@media screen and (max-width: 480px) {
-  /* Your mobile styles go here */
-  body {
-    font-size: 14px; /* Example adjustment for smaller text on mobile */
+.close {
+  position: absolute;
+  top: 10px; /* Adjust this value based on your desired distance from the top */
+  right: 10px; /* Adjust this value based on your desired distance from the right */
+  cursor: pointer;
+  color: #000;
+  font-weight: 700;
+}
+.close:hover {
+  background-color: #01b3b4;
+  color: #ffff;
+  padding: 2px;
+  transition: all 0.3s;
+  border-radius: 5px;
+}
+
+/* Pagination */
+.pagination-main {
+  text-align: center;
+  margin-top: 1.8rem;
+}
+.pagi-active {
+  padding: 10px;
+  background: #01b3b4;
+  outline: none;
+  border: none;
+  border-radius: 3px;
+  margin-left: 3px;
+  margin-right: 3px;
+  color: #fff;
+  height: 40px;
+  width: 40px;
+  transition: all 0.3s;
+}
+.pagi-inactive {
+  padding: 10px;
+  background: #dddd;
+  outline: none;
+  border: none;
+  border-radius: 3px;
+  margin-left: 3px;
+  margin-right: 3px;
+  height: 40px;
+  width: 40px;
+  transition: all 0.3s;
+}
+
+.pagi-inactive:hover {
+  background-color: #d6eeee;
+}
+
+@media only screen and (min-width: 1024px) {
+  .login-main {
+    background: linear-gradient(
+        rgba(255, 255, 255, 0.7),
+        rgba(255, 255, 255, 0.3)
+      ),
+      url('https://images.pexels.com/photos/114979/pexels-photo-114979.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500');
+  }
+
+  .btn-common {
+    width: auto;
+  }
+
+  .sort-container {
+    padding: 2rem;
   }
 
   .sort-main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-    padding-bottom: 0.8rem;
-  }
-  .sortsearch-operation {
-    display: flex;
-    gap: 1rem;
-    margin-left: 1rem;
-  }
-  .btn-common {
-    width: 24%;
-    background: #01b3b4;
-    border: navajowhite;
-    color: #ffff;
-    padding: 10px;
-    border-radius: 3px;
-  }
-  .user {
-    display: none;
+    gap: 2rem;
   }
 }
 
-@media screen and (max-width: 700) {
-  /* Your mobile styles go here */
-  body {
-    font-size: 14px; /* Example adjustment for smaller text on mobile */
+@media only screen and (max-width: 1023px) {
+  .login-main {
+    background: linear-gradient(
+        rgba(255, 255, 255, 0.7),
+        rgba(255, 255, 255, 0.3)
+      ),
+      url('https://images.pexels.com/photos/114979/pexels-photo-114979.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500');
+  }
+
+  .btn-common {
+    width: auto;
+  }
+
+  .sort-container {
+    padding: 2rem;
   }
 
   .sort-main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-    padding-bottom: 0.8rem;
+    gap: 2rem;
   }
-  .sortsearch-operation {
-    display: flex;
-    gap: 1rem;
-    margin-left: 1rem;
+}
+
+@media only screen and (max-width: 767px) {
+  .login-main {
+    background: linear-gradient(
+        rgba(255, 255, 255, 0.7),
+        rgba(255, 255, 255, 0.3)
+      ),
+      url('https://images.pexels.com/photos/114979/pexels-photo-114979.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500');
   }
+
   .btn-common {
-    width: 24%;
-    background: #01b3b4;
-    border: navajowhite;
-    color: #ffff;
-    padding: 10px;
-    border-radius: 3px;
+    width: auto;
   }
+
+  .sort-container {
+    padding: 1rem;
+  }
+
+  .sort-main {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .search-box {
+    width: 100%;
+  }
+
+  .btn-disable,
+  .btn-login {
+    width: 100%;
+  }
+
+  .btn-common {
+    width: 100%;
+  }
+
+  .header {
+    grid-template-columns: 1fr;
+  }
+
   .user {
+    grid-template-columns: 1fr;
+  }
+
+  .info {
+    display: none;
+  }
+
+  .company {
+    text-align: center;
+  }
+
+  .user-icon {
     display: none;
   }
 }

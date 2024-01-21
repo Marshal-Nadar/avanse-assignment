@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useState } from 'react';
 import FormInputs from '../../components/Inputs/FormInputs';
 import '../../App.css';
@@ -8,7 +8,7 @@ const Login = () => {
   const navigate = useNavigate();
   const [values, setValues] = useState({
     email: '',
-    password: '',
+    password: null,
     confirmpassword: '',
   });
 
@@ -58,11 +58,24 @@ const Login = () => {
   const onChange = e => {
     // if (e.target.value === '' || validateEmail(e.target.value)) {
     // }
-    console.log('fd', { ...values, [e.target.name]: e.target.value });
-    setValues({ ...values, [e.target.name]: e.target.value });
-    // setDisable(false);
+    // console.log('fd', { ...values, [e.target.name]: e.target.value });
+    // setValues({ ...values, [e.target.name]: e.target.value });
+    setValues(values => ({
+      ...values,
+      [e.target.name]: e.target.value,
+    }));
+
+    // console.log('mxmxc', values.password === values.confirmpassword);
   };
   console.log(values);
+
+  // useEffect(() => {
+  //   // console.log('Keyword:', values.confirmpassword);
+  //   // console.log('Search: ', values.password);
+  //   if (values.password === values.confirmpassword) {
+  //     setDisable(true);
+  //   }
+  // }, [values.password, values.confirmpassword]);
 
   const handleSubmit = e => {
     console.log('values', values.email);
@@ -95,8 +108,7 @@ const Login = () => {
           })}
         </div>
         <button
-          className={'btn-login'}
-          // disabled
+          className={`btn-login`}
           onClick={e => {
             handleSubmit(e);
           }}

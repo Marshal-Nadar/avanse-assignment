@@ -4,7 +4,6 @@ import './App.css';
 // import Header from './components/Header/Header';
 // import Table from './components/Table/Table';
 import Pagination from './components/Pagination/Pagination';
-
 import Login from './Pages/Login/Login';
 import Homepage from './Pages/Homepage/Homepage';
 
@@ -14,10 +13,11 @@ function App() {
       <Routes>
         <Route path='/' element={<Login />} />
         <Route path='/home' element={<Homepage />} />
-        {/* <Route path='/header' element={<Header />} /> */}
-        {/* <Route path='/table' element={<Table />} />
         <Route path='/pagination' element={<Pagination />} />
-        <Route path='/SortSearch' element={<SortSearch />} /> */}
+        {/* <Route path='/header' element={<Header />} /> */}
+        {/* <Route path='/table' element={<Table />} /> */}
+
+        {/* <Route path='/SortSearch' element={<SortSearch />} /> */}
       </Routes>
     </>
   );

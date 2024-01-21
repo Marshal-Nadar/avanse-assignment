@@ -4,8 +4,10 @@ import './formInputs.css';
 const FormInputs = props => {
   const [focused, setFocused] = useState(false);
   const { label, errorMessage, onChange, id, ...inputProps } = props;
+  // console.log('onChange', inputProps);
 
   const handleFocus = e => {
+    // console.log('Trigger');
     setFocused(true);
   };
 

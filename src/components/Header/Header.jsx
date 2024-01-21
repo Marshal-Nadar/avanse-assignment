@@ -14,10 +14,10 @@ const Header = () => {
           />
         </div>
         <div className='user'>
-          <div className='info'>About Us</div>
-          <div className='info'>Our Product</div>
+          <div className='info'>About</div>
+          <div className='info'>Product</div>
           <div className='info'>Resources</div>
-          <div className='info'>Contact Us</div>
+          <div className='info'>Contact</div>
           <img src={User} className='user-icon' alt='' srcset='' />
         </div>
       </header>
